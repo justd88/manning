@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class SingleManningCalculatorTest extends KernelTestCase
 {
-    private $singleManningCalculator;
+    private SingleManningCalculator $singleManningCalculator;
 
     public function setUp(): void
     {
@@ -37,14 +37,14 @@ class SingleManningCalculatorTest extends KernelTestCase
                 ],
                 22
             ],
-            'Scenario Two - After Each Other' => [
+            'Scenario Two - Shifts After Each Other' => [
                 [
                     new Segment(0, 10),
                     new Segment(10, 23)
                 ],
                 23
             ],
-            'Scenario Three - Lap over' => [
+            'Scenario Three - Shifts Lap over' => [
                 [
                     new Segment(0, 12),
                     new Segment(10, 27)
