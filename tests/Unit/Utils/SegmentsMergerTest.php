@@ -4,19 +4,19 @@ namespace App\Tests\Unit\Utils;
 
 use App\Factory\SegmentFactory;
 use App\Model\Segment;
-use App\Utils\MergeSegments;
+use App\Utils\SegmentsMerger;
 use PHPUnit\Framework\TestCase;
 
-class MergeSegmentsTest extends TestCase
+class SegmentsMergerTest extends TestCase
 {
-    private MergeSegments $mergeSegments;
+    private SegmentsMerger $mergeSegments;
 
     private SegmentFactory $segmentFactory;
 
     public function setUp(): void
     {
         $this->segmentFactory = $this->getMockBuilder(SegmentFactory::class)->getMock();
-        $this->mergeSegments = new MergeSegments($this->segmentFactory);
+        $this->mergeSegments = new SegmentsMerger($this->segmentFactory);
     }
 
     public function testSingleSegment(): void
@@ -59,6 +59,6 @@ class MergeSegmentsTest extends TestCase
                 $expected[2]
             );
 
-        $this->assertEquals($expected, $this->mergeSegments->merge(...$segments));
+        $this->assertSame($expected, $this->mergeSegments->merge(...$segments));
     }
 }

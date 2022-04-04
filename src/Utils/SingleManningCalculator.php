@@ -7,7 +7,7 @@ use App\Model\SegmentInterface;
 class SingleManningCalculator
 {
     public function __construct(
-        private MergeSegments $mergeSegments,
+        private SegmentsMerger $segmentsMerger,
         private SegmentInSegment $segmentInSegment
     ) {
     }
@@ -18,7 +18,7 @@ class SingleManningCalculator
      */
     public function calculate(array $shifts): int
     {
-        $segmentedTimeline = $this->mergeSegments->merge(...$shifts);
+        $segmentedTimeline = $this->segmentsMerger->merge(...$shifts);
 
         $duration = 0;
         foreach ($segmentedTimeline as $segment) {

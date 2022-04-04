@@ -25,7 +25,7 @@ class SingleManningCalculatorTest extends KernelTestCase
      */
     public function testCalculate(array $shifts, int $expected): void
     {
-        $this->assertEquals($expected, $this->singleManningCalculator->calculate($shifts));
+        $this->assertSame($expected, $this->singleManningCalculator->calculate($shifts));
     }
 
     public function calculateDataProvider(): array

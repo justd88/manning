@@ -5,7 +5,7 @@ namespace App\Utils;
 use App\Factory\SegmentFactory;
 use App\Model\SegmentInterface;
 
-class MergeSegments
+class SegmentsMerger
 {
     public function __construct(private SegmentFactory $segmentFactory)
     {
