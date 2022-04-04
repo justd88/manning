@@ -9,8 +9,7 @@ class SingleManningCalculator
     public function __construct(
         private MergeSegments $mergeSegments,
         private SegmentInSegment $segmentInSegment
-    )
-    {
+    ) {
     }
 
     /**

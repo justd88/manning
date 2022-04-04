@@ -10,8 +10,7 @@ class SingleManningFactory
 {
     public function __construct(
         private SingleManningCalculator $singleManningCalculator
-    )
-    {
+    ) {
     }
 
     public function create(Rota $rota): SingleManning

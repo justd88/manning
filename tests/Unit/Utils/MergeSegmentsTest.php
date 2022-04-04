@@ -33,7 +33,6 @@ class MergeSegmentsTest extends TestCase
             ->willReturn($expected[0]);
 
         $this->assertSame($expected, $this->mergeSegments->merge(...$segments));
-
     }
 
     public function testMultiSegmentMerge(): void

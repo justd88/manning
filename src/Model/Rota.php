@@ -24,8 +24,8 @@ class Rota implements IteratorAggregate
         public array $thursday = [],
         public array $friday = [],
         public array $saturday = [],
-        public array $sunday = [])
-    {
+        public array $sunday = []
+    ) {
     }
 
     public function getIterator(): ArrayIterator

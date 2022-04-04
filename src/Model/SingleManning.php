@@ -15,8 +15,8 @@ class SingleManning implements JsonSerializable, IteratorAggregate
         public int $thursday = 0,
         public int $friday = 0,
         public int $saturday = 0,
-        public int $sunday = 0)
-    {
+        public int $sunday = 0
+    ) {
     }
 
     public function getIterator(): ArrayIterator
